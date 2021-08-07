@@ -1,0 +1,2 @@
+1.Identify the aspects of your application that vary and seprate them from what stays the same.
+2.Always code to interface not implemantation. i.e program to a supertype it can be abstract class or interface
