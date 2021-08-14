@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class WeatherData implements Subject {
 	  
 	  private final List<Observer> observers = new ArrayList<>();
@@ -22,19 +23,30 @@ public class WeatherData implements Subject {
 	  @Override
 	  public void notifyObservers () {
 			observers.stream()
-					.forEach(observer -> observer.update(temperature, humidity, pressure));
+					.forEach(Observer::update);
 	  }
 	  
 	  public void measurementsChanged () {
 			notifyObservers();
 	  }
 	  
-	
 	  
 	  public void setMeasurements (float temp, float humidity, float pressure) {
 			this.temperature = temp;
 			this.humidity = humidity;
 			this.pressure = pressure;
 			measurementsChanged();
+	  }
+	  
+	  public float getTemperature () {
+			return temperature;
+	  }
+	  
+	  public float getPressure () {
+			return pressure;
+	  }
+	  
+	  public float getHumidity () {
+			return humidity;
 	  }
 }
