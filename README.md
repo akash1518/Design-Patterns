@@ -1,4 +1,4 @@
 # Design-Patterns
-Contains code examples and explanation for design patterns
+Code examples and explanation  from book **Head First Design Patterns**
 1. Strategy Pattern
 2. Observer Pattern
